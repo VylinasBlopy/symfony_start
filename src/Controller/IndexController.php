@@ -1,9 +1,11 @@
 <?php
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+namespace App\Controller;
+
+use App\Controller\Abstract\ApiAbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class IndexController extends AbstractController
+class IndexController extends ApiAbstractController
 {
     /**
      * @return JsonResponse

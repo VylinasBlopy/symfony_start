@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller\Abstract;
+
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,14 +22,13 @@ class ApiAbstractController extends AbstractController
      * @param string|null $message
      * @param int|null $code
      *
-     * @return Exception
+     * @return Response
      */
-    public function error(Exception $exception, string $message = null, int $code = null): Exception
+    public function error(Exception $exception, string $message = null, int $code = null): Response
     {
-        return new Exception(
-            message: $message ?? $exception->getMessage(),
-            code: $code ?? $exception->getCode(),
-            previous: $exception->getPrevious()
+        return new Response(
+            content: $message ?? $exception->getMessage(),
+            status: $code ?? $exception->getCode()
         );
     }
 

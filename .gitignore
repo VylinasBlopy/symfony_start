@@ -10,5 +10,10 @@
 ###< symfony/framework-bundle ###
 
 ###> IDE/PhpStorm ###
-.idea/*
+.idea/**/*
 ###< IDE/PhpStorm ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
