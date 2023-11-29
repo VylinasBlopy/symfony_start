@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Controller\Abstract\ApiAbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends ApiAbstractController
 {
-    public function index(): JsonResponse
+    #[Route(path: '/ping', name: 'ping', methods: ['GET'])]
+    public function index(): Response
     {
         return $this->success();
     }
