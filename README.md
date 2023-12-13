@@ -33,4 +33,17 @@ Si vous avez installé Symfony CLI, vous pouvez utiliser la commande suivante po
 symfony serve
 ```
 
-## Sommaire
+## Test
+
+Les test sont fait avec PHPUnit.
+
+```bash
+# Lancer tous les tests
+php bin/phpunit 
+
+# Lancer les tests d'un dossier
+php bin/phpunit tests/Form
+
+# Lancer les tests d'un fichier
+php bin/phpunit tests/Form/UserTypeTest.php
+```
